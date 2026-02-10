@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #1B1B2E;
+        }
+
+        header {
+            background-color: #1B1B2E;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .main {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #1B1B2E, #3B6E8E);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .main img{
+            width: 150px;
+            height: 150px;
+        }
+        .main h2 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .main p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+        }
+
+        .main button {
+            padding: 12px 25px;
+            font-size: 1rem;
+            border: none;
+            background-color: #1B1B2E;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .main button:hover {
+            background-color: #CFCFD1;
+        }
+
+        .charac {
+            display: flex;
+            justify-content: space-around;
+            padding: 60px 40px;
+            background-color: white;
+        }
+
+        .charac-box {
+            width: 30%;
+            text-align: center;
+        }
+
+        .charac-box h3 {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #1e1e1e;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .feature-box {
+                width: 100%;
+            }
+
+            .main h2 {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav><h1><a href="LANDING PAGE.html">HOME</a></h1></nav>
+        <nav>
+            <a href="BIOGRAPHY.html">Biography</a>
+            <a href="TECH.html">Blogs</a>
+            <a href="PERSONAL.html">More About Me</a>
+        </nav>
+    </header>
+
+    <section class="main">
+        <div>
+            <img src="https://scontent.fmnl33-2.fna.fbcdn.net/v/t39.30808-6/613711372_10225210435728467_6366886050993466255_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHh5mXHvb6pj8kacTQekoIRU8AS9vDdpbJTwBL28N2lsll0xBx9rFWC8Tv_9FLwg74&_nc_ohc=miLfic5XDQcQ7kNvwGbF3dj&_nc_oc=Adn1Gwc5Crae9rjXiaTXTRTwu2WhMSUACN9l-OpCjUFBBWJB0D0AhkVQQCNgGJup7MY&_nc_zt=23&_nc_ht=scontent.fmnl33-2.fna&_nc_gid=UWmJmKlrtQ2Q5cIzTb-Yqg&oh=00_Afv9b8d9zKB_UMpjnbx8Md-Q3qYigMX8Oy4l0zH8nhkWrQ&oe=698FD256">
+            <h2>Hi! I'm Ivan.</h2>
+            <p>Wanna know more about me? Explore to find out!</p>
+            <nav><button><a href="BIOGRAPHY.html">Click Here!</a></button></nav>
+        </div>
+    </section>
+
+    <section class="charac">
+        <div class="charac-box">
+            <h3>Sporty</h3>
+            <p>I can play different sports!</p>
+        </div>
+        <div class="charac-box">
+            <h3>Friendly</h3>
+            <p>Real ones stay, fakes do not.</p>
+        </div>
+        <div class="charac-box">
+            <h3>Humorous</h3>
+            <p>No dead air when we are together!</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Ivan. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
