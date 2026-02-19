@@ -5,28 +5,39 @@
     <title>My Media Page</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
         body {
-            font-family: Helvetica, sans-serif;
-            margin: 20px;
             background-color: #f4f4f4;
+            color: #1B1B2E;
         }
 
-        h1 {
-            text-align: center;
+        header {
+            background-color: #1B1B2E;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        nav {
-            text-align: center;
-            margin-bottom: 30px;
+        header h1 {
+            color: white;
         }
 
         nav a {
-            text-decoration: none;
-            margin: 0 15px;
-            padding: 10px 15px;
-            background-color: #333;
             color: white;
-            border-radius: 5px;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
         }
 
         nav a:hover {
@@ -52,7 +63,16 @@
     </style>
 </head>
 <body>
-
+<header>
+        <nav><h1><a href="index.html">HOME</a></h1></nav>
+        <nav>
+            <a href="MEDIA.html">MEDIA</a>
+            <a href="PHOTOGALLERY.html">PHOTO GALLERY</a>
+            <a href="BIOGRAPHY.html">Biography</a>
+            <a href="TECH.html">Blogs</a>
+            <a href="PERSONAL.html">More About Me</a>
+        </nav>
+    </header>
 <h1>My Media Page</h1>
 
 <nav>
