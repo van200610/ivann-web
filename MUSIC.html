@@ -5,10 +5,39 @@
     <title>My Beats</title>
 
     <style>
-        body {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: Arial, sans-serif;
+        }
+        
+        body {
+            font-family: Helvetica;
             background-color: #f4f4f4;
-            margin: 20px;
+            color: #1B1B2E;
+        }
+
+        header {
+            background-color: #1B1B2E;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
         }
 
         h1 {
@@ -29,23 +58,33 @@
     </style>
 </head>
 <body>
-
+<header>
+        <nav><h1><a href="index.html">HOME</a></h1></nav>
+        <nav>
+            <a href="MEDIA.html">MEDIA</a>
+            <a href="PHOTOGALLERY.html">PHOTO GALLERY</a>
+            <a href="BIOGRAPHY.html">Biography</a>
+            <a href="TECH.html">Blogs</a>
+            <a href="PERSONAL.html">More About Me</a>
+        </nav>
+</header>
+    
 <h1>My Favorite Beats</h1>
 
 <div class="music-container">
-    <h2>Blinding Lights</h2>
-    <p><strong>Artist:</strong> The Weeknd</p>
-    <p><strong>Genre:</strong> Pop</p>
-    <p><strong>Album:</strong> After Hours</p>
-    <img src="https://upload.wikimedia.org/wikipedia/en/c/c1/The_Weeknd_-_After_Hours.png">
+    <h2>Multo</h2>
+    <p><strong>Artist:</strong> Cup of Joe</p>
+    <p><strong>Genre:</strong> OPM/Pop Rock</p>
+    <p><strong>Album:</strong> Silakbo</p>
+    <img src="multo.png">
 </div>
 
 <div class="music-container">
     <h2>Perfect</h2>
-    <p><strong>Artist:</strong> Ed Sheeran</p>
-    <p><strong>Genre:</strong> Romance / Pop</p>
-    <p><strong>Album:</strong> Divide</p>
-    <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Divide_cover.png">
+    <p><strong>Artist:</strong> IV of Spades</p>
+    <p><strong>Genre:</strong> Pop Rock/Indie</p>
+    <p><strong>Album:</strong> Mundo</p>
+    <img src="mundo.png">
 </div>
 
 </body>
