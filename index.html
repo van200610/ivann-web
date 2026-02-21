@@ -95,17 +95,18 @@
         }
 
         footer {
+            font-family: Helvetica;
+            font-weight: bold;
             background-color: #1e1e1e;
             color: white;
             text-align: center;
             padding: 15px;
+            text-decoration: none;
         }
 
-        footer a {
-            font-family: Helvetica;
-            font-weight: bold;
-        }
-        
+        footer a:hover {
+            text-decoration: underline;
+        }    
         @media (max-width: 768px) {
             .features {
                 flex-direction: column;
@@ -125,7 +126,7 @@
 <body>
 
     <header>
-        <nav><h1><a href="index.html">Home</a></h1></nav>
+        <nav><h1><a href="index.html">HOME</a></h1></nav>
         <nav>
             <a href="MEDIA.html">Media</a>
             <a href="PHOTOGALLERY.html">Photo Gallery</a>
@@ -137,7 +138,7 @@
 
     <section class="main">
         <div>
-            <img src="me 3.jpg">
+            <img src="me 3.jpg" alt="My image." title="A picture of myself." width="256px" height="256px">
             <h2>Hi! I'm Ivan.</h2>
             <p>Wanna know more about me? Explore to find out!</p>
             <button><a href="BIOGRAPHY.html">Click Here!</a></button>
@@ -165,6 +166,7 @@
 
 </body>
 </html>
+
 
 
 
