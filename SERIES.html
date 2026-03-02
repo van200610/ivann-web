@@ -1,98 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Favorite TV Shows</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Favorite TV Shows</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        
-        body {
-            font-family: Helvetica;
-            background-color: #f4f4f4;
-            color: #1B1B2E;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
 
-        header {
-            background-color: #1B1B2E;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+body {
+    background-color: #DDE4EC;
+    padding-top: 90px;
+}
 
-        header h1 {
-            color: white;
-        }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #1B1B2E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    z-index: 1000;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-        }
+.logo a {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 15px;
+}
 
+header nav a:hover {
+    text-decoration: underline;
+}
 
-        h1 {
-            text-align: center;
-        }
+.container {
+    width: 75%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
 
-        .show {
-            background: white;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
+.container h1 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #1B1B2E;
+}
 
-        iframe {
-            width: 100%;
-            height: 300px;
-        }
+.show-card {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #F8F9FC;
+    align-items: flex-start;
+    transition: 0.3s ease;
+}
 
-        img {
-            width: 200px;
-        }
-    </style>
+.show-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.show-card img {
+    width: 220px;
+    border-radius: 10px;
+}
+
+.show-info {
+    flex: 1;
+}
+
+.show-info h2 {
+    margin-bottom: 12px;
+    color: #1B1B2E;
+}
+
+.show-info p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: none;
+}
+
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.page-navigation a {
+    text-decoration: none;
+    background-color: #1B1B2E;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.page-navigation a:hover {
+    background-color: #3F3F5E;
+}
+
+@media(max-width: 768px){
+
+    .container {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .show-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .show-card img {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    iframe {
+        height: 220px;
+    }
+
+    header {
+        padding: 0 20px;
+    }
+}
+</style>
 </head>
+
 <body>
+
 <header>
-        <nav><h1><a href="index.html">HOME</a></h1></nav>
-        <nav>
-            <a href="MEDIA.html">MEDIA</a>
-            <a href="PHOTOGALLERY.html">PHOTO GALLERY</a>
-            <a href="BIOGRAPHY.html">Biography</a>
-            <a href="TECH.html">Blogs</a>
-            <a href="PERSONAL.html">More About Me</a>
-        </nav>
-    </header>
-<h1><a href="MOVIES.html"> << </a> My Favorite TV Shows/Series </h1>
+    <div class="logo">
+        <a href="index.html">HOME</a>
+    </div>
+    <nav>
+        <a href="BIOGRAPHY.html">Biography</a>
+        <a href="TECH.html">Blogs</a>
+    </nav>
+</header>
 
-<div class="show">
-    <h2>Stranger Things</h2>
-    <p><strong>Director:</strong> The Duffer Brothers</p>
-    <p><strong>Star/s:</strong>Finn Wolfhard, Millie Bobby Brown, Noah Schnapp</p>
-    <p><strong>Synopsis:</strong> A group of kids uncover supernatural mysteries in their town.</p>
-    <img src="strangerthings.jpg">
-    <iframe src="https://www.youtube.com/embed/b9EkMc79ZSU" allowfullscreen></iframe>
-</div>
+<div class="container">
+    <h1>📺 My Favorite TV Shows / Series</h1>
 
-<div class="show">
-    <h2>Loki (Season 1&2)</h2>
-    <p><strong>Director:</strong> (S1) Kate Herron; (S2) Justin Benson & Aaron Moorhead </p>
-    <p><strong>Star/s:</strong> Tom Hiddleston</p>
-    <p><strong>Synopsis:</strong> Arrested by the Time Variance Authority (TVA) for violating the "Sacred Timeline," he is forced to fix reality, eventually battling to save the multiverse.</p>
-    <img src="loki.jpg">
-    <iframe src="https://www.youtube.com/embed/nW948Va-l10?si=7_70zPyRw1l-zWUH" allowfullscreen></iframe>
+    <div class="show-card">
+        <img src="strangerthings.jpg" alt="Stranger Things Poster">
+        <div class="show-info">
+            <h2>Stranger Things</h2>
+            <p><strong>Director:</strong> The Duffer Brothers</p>
+            <p><strong>Stars:</strong> Finn Wolfhard, Millie Bobby Brown, Noah Schnapp</p>
+            <p><strong>Synopsis:</strong> A group of kids uncover supernatural mysteries in their town while facing dark forces from another dimension.</p>
+            <iframe src="https://www.youtube.com/embed/b9EkMc79ZSU" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="show-card">
+        <img src="loki.jpg" alt="Loki Series Poster">
+        <div class="show-info">
+            <h2>Loki (Season 1 & 2)</h2>
+            <p><strong>Director:</strong> (S1) Kate Herron; (S2) Justin Benson & Aaron Moorhead</p>
+            <p><strong>Stars:</strong> Tom Hiddleston</p>
+            <p><strong>Synopsis:</strong> Arrested by the Time Variance Authority (TVA) for violating the Sacred Timeline, Loki is forced to fix reality and ultimately battles to save the multiverse.</p>
+            <iframe src="https://www.youtube.com/embed/nW948Va-l10" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="page-navigation">
+        <a href="MOVIES.html">← Previous Page</a>
+    </div>
+
 </div>
 
 </body>
 </html>
-
