@@ -48,10 +48,18 @@
         }
 
         .main {
-            width: 85%;
-            margin: 80px auto;
-            color: #1B1B2E;
-            line-height: 1.6;
+            margin: 80px 0;
+        }
+
+        .landing-container {
+          width: 85%;
+          margin: 0 auto;
+          padding: 50px;
+          background-color: white;
+          border-radius: 20px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+          overflow: hidden;
+          color: #1B1B2E;
         }
 
         .lp-image {
@@ -65,14 +73,14 @@
             object-fit: cover;
         }
 
-        .main h2 {
+        .landing-text h2 {
             font-size: 50px;
             margin-bottom: 20px;
         }
 
-        .main p {
+        .landing-text p {
             font-size: 1.2rem;
-            margin-bottom: 25px;
+            line-height: 1.6;
             max-width: 700px;
         }
 
@@ -142,7 +150,7 @@
                 margin: 0 auto 30px auto;
             }
 
-            .main {
+            .landing-container {
                 text-align: center;
             }
 
@@ -172,15 +180,18 @@
     </header>
 
     <section class="main">
-        <img src="lp pic.jpg" alt="My image." title="A picture of myself." class="lp-image">
+        <div class="landing-container">
+            <img src="lp pic.jpg" alt="My image." title="A picture of myself." class="lp-image">
 
-        <h2>Hi, I'm Ivan. Welcome to my website.</h2>
-
-        <p>
-            I am currently a college student from University of the East-Manila.
-            My program is BS Computer Science and already at my second year!
-            By browsing this website, you'll get to know more about me.
-        </p>
+            <div class="landing-text">
+                <h2>Hi, I'm Ivan. Welcome to my website.</h2>
+                <p>
+                    I am currently a college student from University of the East-Manila.
+                    My program is BS Computer Science and already at my second year!
+                    By browsing this website, you'll get to know more about me.
+                </p>
+            </div>
+        </div>
     </section>
 
     <div class="pop-up">
@@ -207,8 +218,10 @@
     </section>
 
     <footer>
-        <p>Contact: 09991814549 | 
-        <a href="mailto:maghirang.chrisivan@ue.edu.ph">Click this to email me!</a></p>
+        <p>
+            Contact: 09991814549 |
+            <a href="mailto:maghirang.chrisivan@ue.edu.ph">Click this to email me!</a>
+        </p>
     </footer>
 
 </body>
