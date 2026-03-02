@@ -1,136 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Photo Gallery</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Gallery</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #F4F4F4;
-            text-align: center;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
 
-        header {
-            background-color: #1B1B2E;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+body {
+    background-color: #DDE4EC;
+    padding-top: 90px;
+}
 
-        header h1 {
-            color: white;
-        }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #1B1B2E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    z-index: 1000;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-        }
+.logo a {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 15px;
+}
 
-        h2 {
-            margin-top: 40px;
-        }
+header nav a:hover {
+    text-decoration: underline;
+}
 
-        .collection {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-            padding: 20px;
-        }
+h2 {
+    margin-top: 40px;
+    text-align: center;
+    color: #1B1B2E;
+}
 
-        .collection a {
-            display: block;
-        }
+.collection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px 60px;
+}
 
-        .collection img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
+.collection a {
+    display: block;
+}
 
-        .collection img:hover {
-            transform: scale(1.05);
-        }
+.collection img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
 
-        .top-link {
-            margin: 30px 0;
-        }
+.collection img:hover {
+    transform: scale(1.05);
+}
 
-        .top-link a {
-            text-decoration: none;
-            font-weight: bold;
-            color: #222;
-        }
+.top-link {
+    text-align: center;
+    margin: 30px 0 50px;
+}
 
-        .top-link a:hover {
-            color: crimson;
-        }
-    </style>
+.top-link a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1B1B2E;
+}
+
+.top-link a:hover {
+    color: crimson;
+}
+
+@media(max-width: 768px) {
+    .collection {
+        padding: 20px;
+    }
+
+    header {
+        padding: 0 20px;
+    }
+}
+</style>
 </head>
 
 <body id="top">
 
 <header>
-        <nav><h1><a href="index.html">HOME</a></h1></nav>
-        <nav>
-            <a href="MEDIA.html">MEDIA</a>
-            <a href="PHOTOGALLERY.html">PHOTO GALLERY</a>
-            <a href="BIOGRAPHY.html">Biography</a>
-            <a href="TECH.html">Blogs</a>
-            <a href="PERSONAL.html">More About Me</a>
-        </nav>
+    <div class="logo">
+        <a href="index.html">HOME</a>
+    </div>
+    <nav>
+        <a href="BIOGRAPHY.html">Biography</a>
+        <a href="TECH.html">Blogs</a>
+    </nav>
 </header>
-
 
 <h2>Childhood Pics</h2>
 <div class="collection">
-    <a href="ch 1.jpg"><img src="ch 1.jpg" alt="Me as a baby"></a>
-    <a href="ch 2.jpg"><img src="ch 2.jpg" alt="Me as a baby"></a>
-    <a href="ch 3.jpg"><img src="ch 3.jpg" alt="Me as a baby"></a>
-    <a href="ch 4.jpg"><img src="ch 4.jpg" alt="Me as a baby"></a>
-    <a href="ch 5.jpg"><img src="ch 5.jpg" alt="Me as a baby"></a>
+    <a href="ch 1.jpg" target="_blank"><img src="ch 1.jpg" alt="Me as a baby"></a>
+    <a href="ch 2.jpg" target="_blank"><img src="ch 2.jpg" alt="Me as a baby"></a>
+    <a href="ch 3.jpg" target="_blank"><img src="ch 3.jpg" alt="Me as a baby"></a>
+    <a href="ch 4.jpg" target="_blank"><img src="ch 4.jpg" alt="Me as a baby"></a>
+    <a href="ch 5.jpg" target="_blank"><img src="ch 5.jpg" alt="Me as a baby"></a>
 </div>
 
 <h2>My POV</h2>
 <div class="collection">
-    <a href="pov 1.jpg"><img src="pov 1.jpg" alt="Scenery1"></a>
-    <a href="pov 2.jpg"><img src="pov 2.jpg" alt="Scenery2"></a>
-    <a href="pov 3.jpg"><img src="pov 3.jpg" alt="Scenery3"></a>
-    <a href="pov 4.jpg"><img src="pov 4.jpg" alt="Scenery4"></a>
-    <a href="pov 5.jpg"><img src="pov 5.jpg" alt="Scenery5"></a>
+    <a href="pov 1.jpg" target="_blank"><img src="pov 1.jpg" alt="Scenery1"></a>
+    <a href="pov 2.jpg" target="_blank"><img src="pov 2.jpg" alt="Scenery2"></a>
+    <a href="pov 3.jpg" target="_blank"><img src="pov 3.jpg" alt="Scenery3"></a>
+    <a href="pov 4.jpg" target="_blank"><img src="pov 4.jpg" alt="Scenery4"></a>
+    <a href="pov 5.jpg" target="_blank"><img src="pov 5.jpg" alt="Scenery5"></a>
 </div>
 
 <h2>Sport Pics</h2>
 <div class="collection">
-    <a href="sp 1.jpg"><img src="sp 1.jpg" alt="SportPic"></a>
-    <a href="sp 2.png"><img src="sp 2.png" alt="SportPic"></a>
-    <a href="sp 3.jpg"><img src="sp 3.jpg" alt="SportPic"></a>
-    <a href="sp 4.jpg"><img src="sp 4.jpg" alt="SportPic"></a>
-    <a href="sp 5.jpg"><img src="sp 5.jpg" alt="SportPic"></a>
+    <a href="sp 1.jpg" target="_blank"><img src="sp 1.jpg" alt="SportPic"></a>
+    <a href="sp 2.png" target="_blank"><img src="sp 2.png" alt="SportPic"></a>
+    <a href="sp 3.jpg" target="_blank"><img src="sp 3.jpg" alt="SportPic"></a>
+    <a href="sp 4.jpg" target="_blank"><img src="sp 4.jpg" alt="SportPic"></a>
+    <a href="sp 5.jpg" target="_blank"><img src="sp 5.jpg" alt="SportPic"></a>
 </div>
 
 <h2>Me</h2>
 <div class="collection">
-    <a href="me1.jpg"><img src="me1.jpg" alt="MyPic"></a>
-    <a href="me2.jpg"><img src="me2.jpg" alt="MyPic"></a>
-    <a href="me3.jpg"><img src="me3.jpg" alt="MyPic"></a>
-    <a href="me4.jpg"><img src="me4.jpg" alt="MyPic"></a>
-    <a href="me5.jpg"><img src="me5.jpg" alt="MyPic"></a>
+    <a href="me1.jpg" target="_blank"><img src="me1.jpg" alt="MyPic"></a>
+    <a href="me2.jpg" target="_blank"><img src="me2.jpg" alt="MyPic"></a>
+    <a href="me3.jpg" target="_blank"><img src="me3.jpg" alt="MyPic"></a>
+    <a href="me4.jpg" target="_blank"><img src="me4.jpg" alt="MyPic"></a>
+    <a href="me5.jpg" target="_blank"><img src="me5.jpg" alt="MyPic"></a>
 </div>
 
 <div class="top-link">
