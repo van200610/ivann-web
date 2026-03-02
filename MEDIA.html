@@ -1,76 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Media Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Media Page</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
 
-        body {
-            background-image: url(cover.jpg);
-            background-size: cover;
-        }
+body {
+    background: url(cover.jpg) no-repeat center center/cover;
+    padding-top: 90px;
+}
 
-        header {
-            background-color: #1B1B2E;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #1B1B2E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    z-index: 1000;
+}
 
-        header h1 {
-            color: white;
-        }
+.logo a {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-        }
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 15px;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .category a {
-            display: block;
-            width: 200px;
-            margin: 20px auto;
-            padding: 15px;
-            text-decoration: none;
-            background-color: #1B1B2E;
-            color: white;
-            border-radius: 8px;
-        }
+header nav a:hover {
+    text-decoration: underline;
+}
 
-        .category a:hover {
-            background-color: #555;
+.container {
+    width: 75%;
+    max-width: 900px;
+    margin: 60px auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 50px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.container h1 {
+    margin-bottom: 15px;
+    color: #1B1B2E;
+}
+
+.container p {
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.category-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.category-links a {
+    text-decoration: none;
+    background-color: #1B1B2E;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.category-links a:hover {
+    background-color: #3F3F5E;
+    transform: translateY(-3px);
+}
+
+@media(max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    header {
+        padding: 0 20px;
+    }
+}
 </style>
 </head>
-<body >
-    <header>
-        <nav><h1><a href="index.html">HOME</a></h1></nav>
-        <nav>
-            <a href="MEDIA.html">MEDIA</a>
-            <a href="PHOTOGALLERY.html">PHOTO GALLERY</a>
-            <a href="BIOGRAPHY.html">Biography</a>
-            <a href="TECH.html">Blogs</a>
-            <a href="PERSONAL.html">More About Me</a>
-        </nav>
-    </header>
 
-<div class="category">
-    <a href="MUSIC.html">🎵 My Beats</a>
-    <a href="MOVIES.html">🎬 Movies</a>
-    <a href="SERIES.html">📺 TV Shows</a>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">HOME</a>
+    </div>
+    <nav>
+
+        <a href="BIOGRAPHY.html">Biography</a>
+        <a href="TECH.html">Blogs</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>🎧 Welcome to My Media Page</h1>
+    <p>Explore my all-time favorites — from beats to blockbuster movies and binge-worthy TV shows.</p>
+
+    <div class="category-links">
+        <a href="MUSIC.html">🎵 My Beats</a>
+        <a href="MOVIES.html">🎬 Movies</a>
+        <a href="SERIES.html">📺 TV Shows</a>
+    </div>
 </div>
-    <h1 style="text-align: center; color: #FFFFFF;"><br>WELCOME TO MY MEDIA PAGE</br></h1>
-    <p style="text-align: center; color: #FFFFFF;">In this page you can see my different all-time faves, from Music to TV shows!</p>
+
 </body>
 </html>
