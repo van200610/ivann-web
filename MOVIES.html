@@ -1,101 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Favorite Movies</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Favorite Movies</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        
-        body {
-            font-family: Helvetica;
-            background-color: #f4f4f4;
-            color: #1B1B2E;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
 
-        header {
-            background-color: #1B1B2E;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+body {
+    background-color: #DDE4EC;
+    padding-top: 90px;
+}
 
-        header h1 {
-            color: white;
-        }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #1B1B2E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    z-index: 1000;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-        }
+.logo a {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 15px;
+}
 
-        h1 {
-            text-align: center;
-        }
+header nav a:hover {
+    text-decoration: underline;
+}
 
-        .movie {
-            background: white;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
+.container {
+    width: 75%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
 
-        iframe {
-            width: 100%;
-            height: 300px;
-        }
-            
-        img {
-            width: 200px;
-        }
-    </style>
+.container h1 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #1B1B2E;
+}
+
+.movie-card {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #F8F9FC;
+    align-items: flex-start;
+    transition: 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.movie-card img {
+    width: 220px;
+    border-radius: 10px;
+}
+
+.movie-info {
+    flex: 1;
+}
+
+.movie-info h2 {
+    margin-bottom: 12px;
+    color: #1B1B2E;
+}
+
+.movie-info p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: none;
+}
+
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.page-navigation a {
+    text-decoration: none;
+    background-color: #1B1B2E;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.page-navigation a:hover {
+    background-color: #3F3F5E;
+}
+
+@media(max-width: 768px){
+
+    .container {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .movie-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .movie-card img {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    iframe {
+        height: 220px;
+    }
+
+    header {
+        padding: 0 20px;
+    }
+}
+</style>
 </head>
+
 <body>
-    <header>
-        <nav><h1><a href="index.html">HOME</a></h1></nav>
-        <nav>
-            <a href="MEDIA.html">MEDIA</a>
-            <a href="PHOTOGALLERY.html">PHOTO GALLERY</a>
-            <a href="BIOGRAPHY.html">Biography</a>
-            <a href="TECH.html">Blogs</a>
-            <a href="PERSONAL.html">More About Me</a>
-        </nav>
-    </header> 
-<h1>
-    <a href="MUSIC.html"> << </a> 
-    My Favorite Movies 
-    <a href="SERIES.html"> >> </a>
-</h1>
 
-<div class="movie">
-    <h2>Avengers: Endgame</h2>
-    <p><strong>Director:</strong> Anthony & Joe Russo</p>
-    <p><strong>Star/s:</strong> Robert Downey Jr., Chris Evans, Chris Hemsworth, Josh Brolin</p>
-    <p><strong>Synopsis:</strong> After what happened in Avengers: Infinity War, The Avengers assemble for a final battle against Thanos.</p>
-    <img src="avengers.jpg">
-    <iframe src="https://www.youtube.com/embed/TcMBFSGVi1c" allowfullscreen></iframe>
-</div>
+<header>
+    <div class="logo">
+        <a href="index.html">HOME</a>
+    </div>
+    <nav>
+        <a href="BIOGRAPHY.html">Biography</a>
+        <a href="TECH.html">Blogs</a>
+    </nav>
+</header>
 
-<div class="movie">
-    <h2>Averngers: Infinity War</h2>
-    <p><strong>Director:</strong> Anthony & Joe Russo</p>
-    <p><strong>Star/s:</strong> Robert Downey Jr., Chris Evans, Chris Hemsworth, Josh Brolin</p>
-    <p><strong>Synopsis:</strong> The Avengers and other superheroes unite to battle Thanos, who seeks to collect all six Infinity Stones to wipe out half of all life in the universe.</p>
-    <img src="infinity.jpg">
-    <iframe src="https://www.youtube.com/embed/6ZfuNTqbHE8?si=Us-I4tHi84Wk5HSg" allowfullscreen></iframe>
+<div class="container">
+    <h1>🎬 My Favorite Movies</h1>
+
+    <div class="movie-card">
+        <img src="avengers.jpg" alt="Avengers Endgame Poster">
+        <div class="movie-info">
+            <h2>Avengers: Endgame</h2>
+            <p><strong>Director:</strong> Anthony & Joe Russo</p>
+            <p><strong>Stars:</strong> Robert Downey Jr., Chris Evans, Chris Hemsworth, Josh Brolin</p>
+            <p><strong>Synopsis:</strong> After the devastating events of Infinity War, the Avengers assemble once more for a final battle against Thanos to restore balance to the universe.</p>
+            <iframe src="https://www.youtube.com/embed/TcMBFSGVi1c" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="movie-card">
+        <img src="infinity.jpg" alt="Avengers Infinity War Poster">
+        <div class="movie-info">
+            <h2>Avengers: Infinity War</h2>
+            <p><strong>Director:</strong> Anthony & Joe Russo</p>
+            <p><strong>Stars:</strong> Robert Downey Jr., Chris Evans, Chris Hemsworth, Josh Brolin</p>
+            <p><strong>Synopsis:</strong> The Avengers and their allies unite to stop Thanos, who seeks to collect all six Infinity Stones and eliminate half of all life in the universe.</p>
+            <iframe src="https://www.youtube.com/embed/6ZfuNTqbHE8" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="page-navigation">
+        <a href="MUSIC.html">← Previous Page</a>
+        <a href="SERIES.html">Next Page →</a>
+    </div>
+
 </div>
 
 </body>
 </html>
-
