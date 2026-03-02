@@ -14,29 +14,27 @@
         }
 
         body {
-            margin: 0;
             padding-top: 70px;
             background-color: #DDE4EC;
         }
-        
+
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #1B1B2E;
-            padding: 10px 40px;
             height: 70px;
+            background-color: #1B1B2E;
+            padding: 0 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-sizing: border-box
         }
 
-        header h1 {
+        header h1 a {
             font-size: 28px;
-            margin: 0;
             color: white;
+            text-decoration: none;
         }
 
         nav a {
@@ -50,58 +48,61 @@
         }
 
         .main {
-            height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 85%;
+            margin: 80px auto;
             color: #1B1B2E;
-            text-align: left;
-            padding: 20px;
-        }
-        .lp-image {
-            width: 400px;
-            height: 400px;
-            padding: 10px;
-            border: 1px solid #1B1B2E;
-            margin: 20px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            overflow: hidden;
+            line-height: 1.6;
         }
 
-        .image-left {
+        .lp-image {
+            width: 380px;
+            height: 380px;
             float: right;
-            margin-left: 15px;
+            margin-left: 40px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            object-fit: cover;
         }
-        
+
         .main h2 {
             font-size: 50px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .main p {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             margin-bottom: 25px;
+            max-width: 700px;
         }
 
         .pop-up {
-            width: 400px;
+            width: 420px;
             padding: 30px;
-            margin: 50px auto;
+            margin: 60px auto;
             background-color: white;
-            border: none;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
-        }    
+        }
+
+        .pop-up ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        .pop-up li {
+            margin-bottom: 15px;
+        }
+
         .pop-up a {
-            text-align: justify;
             color: #1B1B2E;
             text-decoration: none;
-            margin-left: 20px;
         }
-        .pop-up:hover {
+
+        .pop-up a:hover {
             text-decoration: underline;
         }
+
         .charac {
             display: flex;
             justify-content: space-around;
@@ -119,29 +120,39 @@
         }
 
         footer {
-            font-family: Helvetica;
             background-color: #1B1B2E;
             color: white;
             text-align: center;
-            padding: 15px;
+            padding: 20px;
+        }
+
+        footer a {
+            color: white;
             text-decoration: none;
         }
 
         footer a:hover {
             text-decoration: underline;
-        }    
+        }
+
         @media (max-width: 768px) {
-            .features {
+            .lp-image {
+                float: none;
+                display: block;
+                margin: 0 auto 30px auto;
+            }
+
+            .main {
+                text-align: center;
+            }
+
+            .charac {
                 flex-direction: column;
                 gap: 30px;
             }
 
-            .feature-box {
+            .charac-box {
                 width: 100%;
-            }
-
-            .main h2 {
-                font-size: 16px;
             }
         }
     </style>
@@ -149,7 +160,7 @@
 <body>
 
     <header>
-        <nav><h1><a href="index.html">HOME</a></h1></nav>
+        <h1><a href="index.html">HOME</a></h1>
         <nav>
             <a href="MAP.html">Image Map</a>
             <a href="MEDIA.html">Media</a>
@@ -161,26 +172,25 @@
     </header>
 
     <section class="main">
-        <div>
-            <img src="lp pic.jpg" alt="My image." title="A picture of myself." class="lp-image image-left">
-            <h2>Hi, I'm Ivan. Welcome to my website.</h2>
-            <p>I am currently a college student from University of the East-Manila.
-                My program is BS Computer Science and already at my second year!
-                By browsing this website, you'll get to know more about me myself, and I.
-            </p>
-        </div>
+        <img src="lp pic.jpg" alt="My image." title="A picture of myself." class="lp-image">
+
+        <h2>Hi, I'm Ivan. Welcome to my website.</h2>
+
+        <p>
+            I am currently a college student from University of the East-Manila.
+            My program is BS Computer Science and already at my second year!
+            By browsing this website, you'll get to know more about me.
+        </p>
     </section>
-    
+
     <div class="pop-up">
-        <ul style="disc">
-            <li><a href="MEDIA.html"> My All-time Faves? Click here! <br></a></li>
-            <br>
-            <li><a href="PHOTOGALLERY.html"> Wanna know me through pictures? Check this out!<br></a></li>
-            <br>
-            <li><a href="MAP.html"> Here are my Dream Places to visit! <br></a></li>
+        <ul>
+            <li><a href="MEDIA.html">My All-time Faves? Click here!</a></li>
+            <li><a href="PHOTOGALLERY.html">Wanna know me through pictures? Check this out!</a></li>
+            <li><a href="MAP.html">Here are my Dream Places to visit!</a></li>
         </ul>
     </div>
-    
+
     <section class="charac">
         <div class="charac-box">
             <h3>Sporty</h3>
@@ -197,52 +207,9 @@
     </section>
 
     <footer>
-        <p><b></b>  Contact:</b> 09991814549 | <nav><a href="mailto:maghirang.chrisivan@ue.edu.ph">Click this to email me! </a></nav></p>
+        <p>Contact: 09991814549 | 
+        <a href="mailto:maghirang.chrisivan@ue.edu.ph">Click this to email me!</a></p>
     </footer>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
