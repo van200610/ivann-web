@@ -1,197 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Landing Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Landing Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Helvetica, sans-serif;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
 
-        body {
-            padding-top: 70px;
-            background-color: #DDE4EC;
-        }
+body {
+    padding-top: 70px;
+    background-color: #DDE4EC;
+}
 
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 70px;
-            background-color: #1B1B2E;
-            padding: 0 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #1B1B2E;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        header h1 a {
-            font-size: 28px;
-            color: white;
-            text-decoration: none;
-        }
+header h1 a {
+    font-size: 28px;
+    color: white;
+    text-decoration: none;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+nav a:hover {
+    text-decoration: underline;
+}
 
-        .main {
-            margin: 80px 0;
-        }
+.main {
+    margin: 80px 0;
+}
 
-        .landing-container {
-          width: 85%;
-          margin: 0 auto;
-          padding: 50px;
-          background-color: white;
-          border-radius: 20px;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-          overflow: hidden;
-          color: #1B1B2E;
-        }
+.landing-container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    overflow: hidden;
+    color: #1B1B2E;
+}
 
-        .lp-image {
-            width: 380px;
-            height: 380px;
-            float: right;
-            margin-left: 40px;
-            margin-bottom: 20px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            object-fit: cover;
-        }
+.lp-image {
+    width: 380px;
+    height: 380px;
+    float: right;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
 
-        .landing-text h2 {
-            font-size: 50px;
-            margin-bottom: 20px;
-        }
+.lp-image:hover {
+    transform: scale(1.05);
+}
 
-        .landing-text p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            max-width: 700px;
-        }
+.landing-text h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
 
-        .pop-up {
-            width: 420px;
-            padding: 30px;
-            margin: 60px auto;
-            background-color: white;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-        }
+.landing-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 700px;
+}
 
-        .pop-up ul {
-            list-style: disc;
-            padding-left: 20px;
-        }
+.popup-video-container {
+    width: 85%;
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
 
-        .pop-up li {
-            margin-bottom: 15px;
-        }
+.pop-up {
+    width: 420px;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
 
-        .pop-up a {
-            color: #1B1B2E;
-            text-decoration: none;
-        }
+.pop-up ul {
+    list-style: disc;
+    padding-left: 20px;
+}
 
-        .pop-up a:hover {
-            text-decoration: underline;
-        }
+.pop-up li {
+    margin-bottom: 15px;
+}
 
-        .charac {
-            display: flex;
-            justify-content: space-around;
-            padding: 60px 40px;
-            background-color: white;
-        }
+.pop-up a {
+    color: #1B1B2E;
+    text-decoration: none;
+}
 
-        .charac-box {
-            width: 30%;
-            text-align: center;
-        }
+.pop-up a:hover {
+    text-decoration: underline;
+}
 
-        .charac-box h3 {
-            margin-bottom: 10px;
-        }
+.video-reel {
+    width: 500px;
+    height: 280px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    object-fit: cover;
+    background-color: black;
+}
 
-        footer {
-            background-color: #1B1B2E;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+.charac {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 40px;
+    background-color: white;
+}
 
-        footer a {
-            color: white;
-            text-decoration: none;
-        }
+.charac-box {
+    width: 30%;
+    text-align: center;
+}
 
-        footer a:hover {
-            text-decoration: underline;
-        }
+.charac-box h3 {
+    margin-bottom: 10px;
+}
 
-        @media (max-width: 768px) {
-            .lp-image {
-                float: none;
-                display: block;
-                margin: 0 auto 30px auto;
-            }
+footer {
+    background-color: #1B1B2E;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
 
-            .landing-container {
-                text-align: center;
-            }
+footer a {
+    color: white;
+    text-decoration: none;
+}
 
-            .charac {
-                flex-direction: column;
-                gap: 30px;
-            }
+footer a:hover {
+    text-decoration: underline;
+}
 
-            .charac-box {
-                width: 100%;
-            }
-        }
-    </style>
+@media (max-width: 900px) {
+    .popup-video-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-reel {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .lp-image {
+        float: none;
+        display: block;
+        margin: 0 auto 30px auto;
+    }
+
+    .landing-container {
+        text-align: center;
+    }
+
+    .charac {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .charac-box {
+        width: 100%;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <header>
-        <h1><a href="index.html">HOME</a></h1>
-        <nav>
-            <a href="BIOGRAPHY.html">Biography</a>
-            <a href="TECH.html">Blogs</a>
-        </nav>
-    </header>
-    <hr>
-    <section class="main">
-        <div class="landing-container">
-            <img src="lp pic.jpg" alt="My image." title="A picture of myself." class="lp-image">
+<header>
+    <h1><a href="index.html">HOME</a></h1>
+    <nav>
+        <a href="BIOGRAPHY.html">Biography</a>
+        <a href="TECH.html">Blogs</a>
+    </nav>
+</header>
 
-            <div class="landing-text">
-                <h2>Hi, I'm Ivan. Welcome to my website.</h2>
-                <p>
-                    I am currently a college student from University of the East-Manila.
-                    My program is BS Computer Science and already at my second year!
-                    I just turned 20 this year and I hope that this year will be a
-                    good one for all of us! Making this website was tiring but fun.
-                    Since you're already here, browse freely by following the different
-                    navigations. By browsing this website, you'll get to know more about me.
-                </p>
-            </div>
+<hr>
+
+<section class="main">
+    <div class="landing-container">
+
+        <a href="lp pic.jpg" target="_blank">
+            <img src="lp pic.jpg" 
+                 alt="My image."
+                 title="Click to view full size"
+                 class="lp-image">
+        </a>
+
+        <div class="landing-text">
+            <h2>Hi, I'm Ivan. Welcome to my website.</h2>
+            <p>
+                I am currently a college student from University of the East-Manila.
+                My program is BS Computer Science and already at my second year!
+                I just turned 20 this year and I hope that this year will be a
+                good one for all of us! Making this website was tiring but fun.
+                Since you're already here, browse freely by following the different
+                navigations. By browsing this website, you'll get to know more about me.
+            </p>
         </div>
-    </section>
+    </div>
+</section>
+
+<div class="popup-video-container">
 
     <div class="pop-up">
         <ul>
@@ -200,30 +246,36 @@
             <li><a href="MAP.html">Here are my Dream Places to visit!</a></li>
         </ul>
     </div>
-    <hr>
-    <section class="charac">
-        <div class="charac-box">
-            <h3>Sporty</h3>
-            <p>I can play different sports!</p>
-        </div>
-        <div class="charac-box">
-            <h3>Friendly</h3>
-            <p>Real ones stay, fakes do not.</p>
-        </div>
-        <div class="charac-box">
-            <h3>Humorous</h3>
-            <p>Boring conversations? Not my forte.</p>
-        </div>
-    </section>
 
-    <footer>
-        <p>
-            Contact: 09991814549 |
-            <a href="mailto:maghirang.chrisivan@ue.edu.ph">Click this to email me!</a>
-        </p>
-    </footer>
+    <video class="video-reel" controls>
+        <source src="reel.mp4" type="video/mp4">
+    </video>
+
+</div>
+
+<hr>
+
+<section class="charac">
+    <div class="charac-box">
+        <h3>Sporty</h3>
+        <p>I can play different sports!</p>
+    </div>
+    <div class="charac-box">
+        <h3>Friendly</h3>
+        <p>Real ones stay, fakes do not.</p>
+    </div>
+    <div class="charac-box">
+        <h3>Humorous</h3>
+        <p>Boring conversations? Not my forte.</p>
+    </div>
+</section>
+
+<footer>
+    <p>
+        Contact: 09991814549 |
+        <a href="mailto:maghirang.chrisivan@ue.edu.ph">Click this to email me!</a>
+    </p>
+</footer>
 
 </body>
 </html>
-
-
