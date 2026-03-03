@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Bucket List</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    background-color: #DDE4EC;
+    padding-top: 90px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #1B1B2E;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 a {
+    font-size: 26px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #1B1B2E;
+}
+
+.page-title h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.page-title p {
+    font-size: 16px;
+    color: #444;
+}
+
+.bucket-section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.bucket-section h3 {
+    margin-bottom: 20px;
+    color: #1B1B2E;
+    font-size: 22px;
+}
+
+.bucket-section ul {
+    list-style: none;
+}
+
+.bucket-section li {
+    margin-bottom: 15px;
+    padding-left: 28px;
+    position: relative;
+    font-size: 15px;
+}
+
+.bucket-section li::before {
+    content: "⬜";
+    position: absolute;
+    left: 0;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.completed::before {
+    content: "✅";
+}
+
+.top-link {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.top-link a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1B1B2E;
+}
+
+.top-link a:hover {
+    color: crimson;
+}
+
+@media(max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+}
+</style>
+</head>
+
+<body id="top">
+
+<header>
+    <h1><a href="index.html">HOME</a></h1>
+    <nav>
+        <a href="BIOGRAPHY.html">Biography</a>
+        <a href="MEDIA.html">Media</a>
+        <a href="PHOTOGALLERY.html">Photo Gallery</a>
+        <a href="MAP.html">Dream Places</a>
+        <a href="TECH.html">Blogs</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <div class="page-title">
+        <h2>✨ My Bucket List</h2>
+        <p>Things I want to accomplish, experience, and achieve in life.</p>
+    </div>
+
+    <div class="bucket-section">
+        <h3>🌍 Travel Goals</h3>
+        <ul>
+            <li>Visit Boracay with family and relatives</li>
+            <li>Go to Baguio again</li>
+            <li>Swim in La Union with friends</li>
+            <li>Go island hopping in Palawan</li>
+            <li>Visit Tokyo, Japan with my family</li>
+        </ul>
+    </div>
+
+    <div class="bucket-section">
+        <h3>🎯 Personal Goals</h3>
+        <ul>
+            <li>Graduate with a BS Computer Science degree</li>
+            <li>Have my own car before I turn 30</li>
+            <li>Be financially stable before having own family</li>
+            <li>I want to build a house for my family.</li>
+            <li>Maintain a healthy lifestyle</li>
+        </ul>
+    </div>
+
+    <div class="bucket-section">
+        <h3>🔥 Fun Experiences</h3>
+        <ul>
+            <li>Experience Paragliding</li>
+            <li>Go on a swimming trip with friends</li>
+            <li>Learn how to surf</li>
+            <li>Make a pot from a famous pottery place</li>
+            <li>Go on a spontaneous road trip</li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="top-link">
+    <a href="#top">⬆ Back to Top</a>
+</div>
+
+</body>
+</html>
